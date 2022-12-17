@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Dashboard from "./components/Dashboard";
 import Stock from "./components/Stock";
+import data from "./data"
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/stocks" element={<Dashboard />} />
-        <Route path="/stocks/:symbol" element={<Stock />} />
+        <Route path={`/stocks/:${data.symbol}`} element={<Stock />} />
       </Routes>
     </div>
   );

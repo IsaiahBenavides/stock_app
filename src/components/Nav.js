@@ -5,7 +5,7 @@ export default function Nav() {
         <nav>
             <ul>
                 <li>
-                    <Link to={'/'}>Home</Link>
+                    <Link to={'/stocks'}>Home</Link>
                     <Link to={'/about'}>About</Link>
                 </li>
             </ul>
