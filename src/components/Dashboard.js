@@ -6,19 +6,19 @@ import data from "../data";
 export default function Dashboard() {
   return (
     <>
-      <table>
-        <tr>
-          <th>Company Name</th>
-          <th>Price</th>
-          <th>Change</th>
+      <table id="dashboard">
+        <tr id="dashHeader">
+          <th id="dashHeaderName">Company Name</th>
+          <th id="dashHeaderPrice">Price</th>
+          <th id="dashHeaderChange">Change</th>
         </tr>
-        {data.map((stock) => {
+        {data.map((stock, i) => {
             const { name, lastPrice, change, symbol} = stock
             return(
-                <tr>
-                    <td> <Link to={`/stocks/:${symbol}`}> {name} </Link></td>
-                    <td> {lastPrice} </td>
-                    <td> {change} </td>
+                <tr className="stockData">
+                    <td className="stockName"> <Link to={`/stocks/:${symbol}`}> {name} </Link></td>
+                    <td className="stockPrice"> {lastPrice} </td>
+                    <td className="stockChange"> {change} </td>
                 </tr>
             )
         })}
