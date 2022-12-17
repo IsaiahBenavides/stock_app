@@ -1,21 +1,22 @@
-import './App.css';
-import { Route, Routes } from 'react-router-dom';
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Nav from "./components/Nav";
+import Home from "./components/Home";
+import About from "./components/About";
+import Dashboard from "./components/Dashboard";
+import Stock from "./components/Stock";
 
 function App() {
   return (
-    function App() {
-      return (
-        <div className="App">
-          <Nav/>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/stocks' element={<Dashboard />} />
-            <Route path='/stocks/:symbol' element={<Stock />} />
-          </Routes>
-        </div>
-      );
-    }
+    <div className="App">
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/stocks" element={<Dashboard />} />
+        <Route path="/stocks/:symbol" element={<Stock />} />
+      </Routes>
+    </div>
   );
 }
 
